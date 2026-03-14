@@ -6,6 +6,7 @@ public class PriceRecord {
 
     private final String id;
     private final Instant asOf;
+    //Created it as type of Object as it needs to be flexible
     private final Object payload;
 
     public PriceRecord(String id, Instant asOf, Object payload) {

@@ -13,7 +13,7 @@ class Batch {
     private final ConcurrentMap<String, PriceRecord> records = new ConcurrentHashMap<>();
 
     public void addRecord(PriceRecord record) {
-
+        // Add newest record into records map based on latest AsOf
         records.merge(
                 record.getId(),
                 record,

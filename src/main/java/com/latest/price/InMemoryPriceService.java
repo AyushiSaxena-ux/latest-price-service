@@ -15,6 +15,10 @@ import java.util.concurrent.atomic.AtomicReference;
   - atomic visibility of batch updates
   - lock-free reads
   - consistent view for consumers
+
+ AtomicReference is used to swap the snapshot atomically without
+ requiring explicit synchronization or locks. Readers always see
+ either the old snapshot or the new one, never a partially updated map.
 */
 
 public class InMemoryPriceService implements PriceService {
